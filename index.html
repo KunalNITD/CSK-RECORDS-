@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chennai Super Kings Fan Club - College Assignment</title>
+    <!-- Simple Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for basic icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Sticky Navbar -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo-area">
+                <img src="assets/csk_logo.png" alt="CSK Logo" class="nav-logo" id="navLogo">
+                <span class="nav-title">CSK Fan Club</span>
+            </div>
+            <nav class="nav-menu" id="navMenu">
+                <a href="#hero" class="nav-link active">Home</a>
+                <a href="#hall-of-fame" class="nav-link">Hall of Fame</a>
+                <a href="#stats" class="nav-link">Stats</a>
+                <a href="#squad" class="nav-link">Squad</a>
+                <a href="#victories" class="nav-link">Victories</a>
+                <a href="#records" class="nav-link">Records</a>
+                <a href="#stadium" class="nav-link">Stadium</a>
+                <a href="#cabinet" class="nav-link">Trophies</a>
+                <a href="#quiz" class="nav-link">Quiz</a>
+            </nav>
+            <div class="nav-actions">
+                <!-- Simple Theme Toggle Button -->
+                <button id="theme-toggle" class="theme-btn" title="Toggle Theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="menu-toggle" id="menuToggle" title="Toggle Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+
+        <!-- 1. Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-banner-container">
+                <img src="assets/hero_banner.png" alt="CSK Fan Banner" class="hero-banner">
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="hero-content">
+                <img src="assets/csk_logo.png" alt="CSK Logo" class="hero-logo">
+                <h1 class="hero-title">Chennai Super Kings</h1>
+                <p class="hero-tagline">"Whistle Podu!" (Blow the Whistle!)</p>
+                <p class="hero-intro">
+                    Welcome to the ultimate fan website of Chennai Super Kings (CSK), one of the most successful franchises in IPL history. With five championship titles, a stellar legacy of leadership under MS Dhoni, and an unbeatable home record at Chepauk, CSK represents passion, resilience, and true cricket spirit.
+                </p>
+                <a href="#hall-of-fame" class="btn btn-primary btn-explore">Explore Team</a>
+            </div>
+        </section>
+
+        <!-- 2. Hall of Fame Section -->
+        <section id="hall-of-fame" class="section-container">
+            <div class="section-header">
+                <h2>Hall of Fame</h2>
+                <div class="header-line"></div>
+                <p>Honoring the legendary players who became synonymous with the CSK yellow army.</p>
+            </div>
+            <div class="grid-layout grid-3">
+                <!-- Legend 1: MS Dhoni -->
+                <div class="card hall-card">
+                    <div class="player-img-container">
+                        <img src="assets/player_avatar.png" alt="MS Dhoni" class="player-img">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="player-name">MS Dhoni</h3>
+                        <span class="player-role">Wicketkeeper-Batsman & Captain Cool</span>
+                        <p class="player-desc">The heartbeat of Chennai. Led CSK to 5 IPL titles and established the team's calm, never-say-die attitude.</p>
+                        <div class="player-achievements">
+                            <strong>Key Achievements:</strong>
+                            <ul>
+                                <li>Led CSK to 5 IPL titles (2010, 2011, 2018, 2021, 2023)</li>
+                                <li>Most matches played as IPL Captain (226)</li>
+                                <li>2x Champions League T20 Winner</li>
+                            </ul>
+                        </div>
+                        <div class="player-stats">
+                            <div class="stat-box"><strong>Matches</strong> 264</div>
+                            <div class="stat-box"><strong>Runs</strong> 5,243</div>
+                            <div class="stat-box"><strong>Strike Rate</strong> 137.5</div>
+                            <div class="stat-box"><strong>Average</strong> 39.1</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Legend 2: Suresh Raina -->
+                <div class="card hall-card">
+                    <div class="player-img-container">
+                        <img src="assets/player_avatar.png" alt="Suresh Raina" class="player-img">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="player-name">Suresh Raina</h3>
+                        <span class="player-role">Left-Handed Batsman ("Mr. IPL")</span>
+                        <p class="player-desc">The ultimate team player and backbone of the CSK batting order at number three for over a decade.</p>
+                        <div class="player-achievements">
+                            <strong>Key Achievements:</strong>
+                            <ul>
+                                <li>First player to score 5,000 runs in IPL history</li>
+                                <li>Scored 87 runs off just 25 balls in 2014 Qualifier 2</li>
+                                <li>Most consecutive matches played for CSK (158)</li>
+                            </ul>
+                        </div>
+                        <div class="player-stats">
+                            <div class="stat-box"><strong>Matches</strong> 205</div>
+                            <div class="stat-box"><strong>Runs</strong> 5,528</div>
+                            <div class="stat-box"><strong>Strike Rate</strong> 136.7</div>
+                            <div class="stat-box"><strong>Average</strong> 32.5</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Legend 3: Ravindra Jadeja -->
+                <div class="card hall-card">
+                    <div class="player-img-container">
+                        <img src="assets/player_avatar.png" alt="Ravindra Jadeja" class="player-img">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="player-name">Ravindra Jadeja</h3>
+                        <span class="player-role">Spin-Bowling All-Rounder</span>
+                        <p class="player-desc">Electric fielder, clutch batsman, and tight off-spinner who has single-handedly turned matches for CSK.</p>
+                        <div class="player-achievements">
+                            <strong>Key Achievements:</strong>
+                            <ul>
+                                <li>Hit a 6 and a 4 off the last two balls to win IPL 2023</li>
+                                <li>Took 5/16 vs Deccan Chargers in 2012</li>
+                                <li>Over 150 wickets and 2,500+ runs for CSK</li>
+                            </ul>
+                        </div>
+                        <div class="player-stats">
+                            <div class="stat-box"><strong>Matches</strong> 240</div>
+                            <div class="stat-box"><strong>Wickets</strong> 160</div>
+                            <div class="stat-box"><strong>Runs</strong> 2,958</div>
+                            <div class="stat-box"><strong>Strike Rate</strong> 129.8</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Legend 4: Ravichandran Ashwin -->
+                <div class="card hall-card">
+                    <div class="player-img-container">
+                        <img src="assets/player_avatar.png" alt="R Ashwin" class="player-img">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="player-name">Ravichandran Ashwin</h3>
+                        <span class="player-role">Right-arm Off-Spinner</span>
+                        <p class="player-desc">The local Chennai spin wizard whose variety and clever bowling tactics defined CSK's early success.</p>
+                        <div class="player-achievements">
+                            <strong>Key Achievements:</strong>
+                            <ul>
+                                <li>Broke into national team through CSK performances</li>
+                                <li>Won back-to-back titles in 2010 and 2011</li>
+                                <li>Pioneered the 'Carrom Ball' in the powerplay overs</li>
+                            </ul>
+                        </div>
+                        <div class="player-stats">
+                            <div class="stat-box"><strong>Matches</strong> 212</div>
+                            <div class="stat-box"><strong>Wickets</strong> 180</div>
+                            <div class="stat-box"><strong>Economy</strong> 7.15</div>
+                            <div class="stat-box"><strong>Best</strong> 4/34</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Team Statistics Dashboard Section -->
+        <section id="stats" class="section-container bg-alt">
+            <div class="section-header">
+                <h2>Team Statistics Dashboard</h2>
+                <div class="header-line"></div>
+                <p>Visualizing records and leading milestones in CSK history (Simple Progress Bars).</p>
+            </div>
+            
+            <div class="stats-dashboard">
+                <!-- Most Runs Progress Bars -->
+                <div class="dashboard-card card">
+                    <h3>Most Runs (All-Time)</h3>
+                    <p class="dash-subtitle">Target Reference: Suresh Raina (5,528 Runs)</p>
+                    
+                    <div class="progress-container">
+                        <div class="progress-label">
+                            <span>Suresh Raina</span>
+                            <span>5,528 Runs</span>
+                        </div>
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill" style="width: 100%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="progress-container">
+                        <div class="progress-label">
+                            <span>MS Dhoni</span>
+                            <span>4,957 Runs (for CSK)</span>
+                        </div>
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill" style="width: 89.6%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="progress-container">
+                        <div class="progress-label">
+                            <span>Faf du Plessis</span>
+                            <span>2,721 Runs</span>
+                        </div>
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill" style="width: 49.2%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Most Wickets Progress Bars -->
+                <div class="dashboard-card card">
+                    <h3>Most Wickets (All-Time)</h3>
+                    <p class="dash-subtitle">Target Reference: Dwayne Bravo (140 Wickets for CSK)</p>
+                    
+                    <div class="progress-container">
+                        <div class="progress-label">
+                            <span>Dwayne Bravo</span>
+                            <span>140 Wickets</span>
+                        </div>
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill" style="width: 100%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="progress-container">
+                        <div class="progress-label">
+                            <span>Ravindra Jadeja</span>
+                            <span>125 Wickets</span>
+                        </div>
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill" style="width: 89.2%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="progress-container">
+                        <div class="progress-label">
+                            <span>Ravichandran Ashwin</span>
+                            <span>90 Wickets</span>
+                        </div>
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill" style="width: 64.3%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Most Sixes Chart -->
+                <div class="dashboard-card card">
+                    <h3>Most Sixes for CSK</h3>
+                    <p class="dash-subtitle">Target Reference: MS Dhoni (209 Sixes)</p>
+                    
+                    <div class="progress-container">
+                        <div class="progress-label">
+                            <span>MS Dhoni</span>
+                            <span>209 Sixes</span>
+                        </div>
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill" style="width: 100%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="progress-container">
+                        <div class="progress-label">
+                            <span>Suresh Raina</span>
+                            <span>180 Sixes</span>
+                        </div>
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill" style="width: 86.1%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="progress-container">
+                        <div class="progress-label">
+                            <span>Shivam Dube</span>
+                            <span>82 Sixes</span>
+                        </div>
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill" style="width: 39.2%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Most Hundreds -->
+                <div class="dashboard-card card">
+                    <h3>Most Hundreds</h3>
+                    <p class="dash-subtitle">Target Reference: Shane Watson / Murali Vijay (2 Hundreds)</p>
+                    
+                    <div class="progress-container">
+                        <div class="progress-label">
+                            <span>Shane Watson</span>
+                            <span>2 Hundreds</span>
+                        </div>
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill" style="width: 100%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="progress-container">
+                        <div class="progress-label">
+                            <span>Murali Vijay</span>
+                            <span>2 Hundreds</span>
+                        </div>
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill" style="width: 100%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="progress-container">
+                        <div class="progress-label">
+                            <span>Ruturaj Gaikwad</span>
+                            <span>1 Hundred</span>
+                        </div>
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill" style="width: 50%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Current Squad Section (IPL 2026) -->
+        <section id="squad" class="section-container">
+            <div class="section-header">
+                <h2>Current Squad (IPL 2026)</h2>
+                <div class="header-line"></div>
+                <p>Filter by typing in the search box or select a specific category. Export the squad data to CSV!</p>
+            </div>
+
+            <!-- 10. Player Search & 12. CSV Export Toolbar -->
+            <div class="squad-controls card">
+                <div class="search-box-container">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" id="player-search" placeholder="Search players by name, role, or nationality...">
+                </div>
+                <div class="filter-tabs">
+                    <button class="tab-btn active" data-filter="all">All Squad</button>
+                    <button class="tab-btn" data-filter="batter">Batters</button>
+                    <button class="tab-btn" data-filter="bowler">Bowlers</button>
+                    <button class="tab-btn" data-filter="all-rounder">All-Rounders</button>
+                    <button class="tab-btn" data-filter="wicket-keeper">Wicket Keepers</button>
+                </div>
+                <button id="download-squad" class="btn btn-secondary btn-export">
+                    <i class="fas fa-file-csv"></i> Download Squad CSV
+                </button>
+            </div>
+
+            <!-- Squad Grid -->
+            <div class="grid-layout grid-4" id="squad-grid">
+                <!-- Squad details loaded via JS, but we also write them directly in HTML for initial load and search indexing -->
+                <!-- Batter 1 -->
+                <div class="card squad-card" data-role="batter">
+                    <div class="squad-img-container">
+                        <img src="assets/player_avatar.png" alt="Ruturaj Gaikwad" class="squad-img">
+                    </div>
+                    <div class="squad-details">
+                        <h3 class="squad-name">Ruturaj Gaikwad</h3>
+                        <span class="squad-role">Opening Batsman & Captain</span>
+                        <div class="squad-meta">
+                            <span><i class="fas fa-flag"></i> Indian</span>
+                        </div>
+                        <p class="squad-bio">A classy opening batsman who took over the captaincy reins. He timing and composure define his batting.</p>
+                        <div class="squad-stats">
+                            <span><strong>Matches:</strong> 66</span>
+                            <span><strong>Runs:</strong> 2,380</span>
+                            <span><strong>Avg:</strong> 41.75</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Batter 2 -->
+                <div class="card squad-card" data-role="batter">
+                    <div class="squad-img-container">
+                        <img src="assets/player_avatar.png" alt="Ajinkya Rahane" class="squad-img">
+                    </div>
+                    <div class="squad-details">
+                        <h3 class="squad-name">Ajinkya Rahane</h3>
+                        <span class="squad-role">Middle-Order Batsman</span>
+                        <div class="squad-meta">
+                            <span><i class="fas fa-flag"></i> Indian</span>
+                        </div>
+                        <p class="squad-bio">An experienced domestic batsman who found a new aggressive batting style playing in CSK colors.</p>
+                        <div class="squad-stats">
+                            <span><strong>Matches:</strong> 185</span>
+                            <span><strong>Runs:</strong> 4,600</span>
+                            <span><strong>SR:</strong> 123.50</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Batter 3 -->
+                <div class="card squad-card" data-role="batter">
+                    <div class="squad-img-container">
+                        <img src="assets/player_avatar.png" alt="Shivam Dube" class="squad-img">
+                    </div>
+                    <div class="squad-details">
+                        <h3 class="squad-name">Shivam Dube</h3>
+                        <span class="squad-role">Left-Handed Batsman</span>
+                        <div class="squad-meta">
+                            <span><i class="fas fa-flag"></i> Indian</span>
+                        </div>
+                        <p class="squad-bio">An explosive, tall batsman known for hitting massive sixes, particularly targeting spin bowling.</p>
+                        <div class="squad-stats">
+                            <span><strong>Matches:</strong> 61</span>
+                            <span><strong>Runs:</strong> 1,510</span>
+                            <span><strong>SR:</strong> 141.20</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wicket Keeper 1 -->
+                <div class="card squad-card" data-role="wicket-keeper">
+                    <div class="squad-img-container">
+                        <img src="assets/player_avatar.png" alt="MS Dhoni" class="squad-img">
+                    </div>
+                    <div class="squad-details">
+                        <h3 class="squad-name">MS Dhoni</h3>
+                        <span class="squad-role">Wicketkeeper-Batsman</span>
+                        <div class="squad-meta">
+                            <span><i class="fas fa-flag"></i> Indian</span>
+                        </div>
+                        <p class="squad-bio">The Thala of Chennai, playing as finisher and guiding the bowlers from behind the stumps.</p>
+                        <div class="squad-stats">
+                            <span><strong>Matches:</strong> 264</span>
+                            <span><strong>Runs:</strong> 5,243</span>
+                            <span><strong>SR:</strong> 137.54</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wicket Keeper 2 -->
+                <div class="card squad-card" data-role="wicket-keeper">
+                    <div class="squad-img-container">
+                        <img src="assets/player_avatar.png" alt="Devon Conway" class="squad-img">
+                    </div>
+                    <div class="squad-details">
+                        <h3 class="squad-name">Devon Conway</h3>
+                        <span class="squad-role">Wicketkeeper-Batsman</span>
+                        <div class="squad-meta">
+                            <span><i class="fas fa-flag"></i> New Zealand</span>
+                        </div>
+                        <p class="squad-bio">A consistent Kiwi opener who can anchor the innings and hit spin with sweeps and reverse-sweeps.</p>
+                        <div class="squad-stats">
+                            <span><strong>Matches:</strong> 23</span>
+                            <span><strong>Runs:</strong> 924</span>
+                            <span><strong>Avg:</strong> 46.20</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- All-Rounder 1 -->
+                <div class="card squad-card" data-role="all-rounder">
+                    <div class="squad-img-container">
+                        <img src="assets/player_avatar.png" alt="Ravindra Jadeja" class="squad-img">
+                    </div>
+                    <div class="squad-details">
+                        <h3 class="squad-name">Ravindra Jadeja</h3>
+                        <span class="squad-role">Spin-Bowling All-Rounder</span>
+                        <div class="squad-meta">
+                            <span><i class="fas fa-flag"></i> Indian</span>
+                        </div>
+                        <p class="squad-bio">CSK's premium all-rounder. Quick over rate spinner and an incredibly destructive late-overs finisher.</p>
+                        <div class="squad-stats">
+                            <span><strong>Matches:</strong> 240</span>
+                            <span><strong>Wickets:</strong> 160</span>
+                            <span><strong>SR:</strong> 129.80</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- All-Rounder 2 -->
+                <div class="card squad-card" data-role="all-rounder">
+                    <div class="squad-img-container">
+                        <img src="assets/player_avatar.png" alt="Mitchell Santner" class="squad-img">
+                    </div>
+                    <div class="squad-details">
+                        <h3 class="squad-name">Mitchell Santner</h3>
+                        <span class="squad-role">Spin-Bowling All-Rounder</span>
+                        <div class="squad-meta">
+                            <span><i class="fas fa-flag"></i> New Zealand</span>
+                        </div>
+                        <p class="squad-bio">Economical left-arm spinner who provides excellent control and possesses handy hitting abilities.</p>
+                        <div class="squad-stats">
+                            <span><strong>Matches:</strong> 18</span>
+                            <span><strong>Wickets:</strong> 15</span>
+                            <span><strong>Econ:</strong> 6.90</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- All-Rounder 3 -->
+                <div class="card squad-card" data-role="all-rounder">
+                    <div class="squad-img-container">
+                        <img src="assets/player_avatar.png" alt="Rachin Ravindra" class="squad-img">
+                    </div>
+                    <div class="squad-details">
+                        <h3 class="squad-name">Rachin Ravindra</h3>
+                        <span class="squad-role">All-Rounder</span>
+                        <div class="squad-meta">
+                            <span><i class="fas fa-flag"></i> New Zealand</span>
+                        </div>
+                        <p class="squad-bio">A highly talented youngster who bats aggressively at the top order and bowls useful slow left-arm spin.</p>
+                        <div class="squad-stats">
+                            <span><strong>Matches:</strong> 10</span>
+                            <span><strong>Runs:</strong> 222</span>
+                            <span><strong>SR:</strong> 160.80</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bowler 1 -->
+                <div class="card squad-card" data-role="bowler">
+                    <div class="squad-img-container">
+                        <img src="assets/player_avatar.png" alt="Matheesha Pathirana" class="squad-img">
+                    </div>
+                    <div class="squad-details">
+                        <h3 class="squad-name">Matheesha Pathirana</h3>
+                        <span class="squad-role">Fast Bowler</span>
+                        <div class="squad-meta">
+                            <span><i class="fas fa-flag"></i> Sri Lanka</span>
+                        </div>
+                        <p class="squad-bio">Nicknamed "Baby Malinga" due to his slingy action. An exceptional death bowler specializing in yorkers.</p>
+                        <div class="squad-stats">
+                            <span><strong>Matches:</strong> 20</span>
+                            <span><strong>Wickets:</strong> 34</span>
+                            <span><strong>Econ:</strong> 7.80</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bowler 2 -->
+                <div class="card squad-card" data-role="bowler">
+                    <div class="squad-img-container">
+                        <img src="assets/player_avatar.png" alt="Maheesh Theekshana" class="squad-img">
+                    </div>
+                    <div class="squad-details">
+                        <h3 class="squad-name">Maheesh Theekshana</h3>
+                        <span class="squad-role">Spin Bowler</span>
+                        <div class="squad-meta">
+                            <span><i class="fas fa-flag"></i> Sri Lanka</span>
+                        </div>
+                        <p class="squad-bio">A mystery spinner with multiple variations, capable of bowling key overs both early and late in matches.</p>
+                        <div class="squad-stats">
+                            <span><strong>Matches:</strong> 30</span>
+                            <span><strong>Wickets:</strong> 31</span>
+                            <span><strong>Econ:</strong> 7.60</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bowler 3 -->
+                <div class="card squad-card" data-role="bowler">
+                    <div class="squad-img-container">
+                        <img src="assets/player_avatar.png" alt="Tushar Deshpande" class="squad-img">
+                    </div>
+                    <div class="squad-details">
+                        <h3 class="squad-name">Tushar Deshpande</h3>
+                        <span class="squad-role">Fast Bowler</span>
+                        <div class="squad-meta">
+                            <span><i class="fas fa-flag"></i> Indian</span>
+                        </div>
+                        <p class="squad-bio">Skilled pace bowler who takes wickets in the powerplay. CSK's highest wicket-taker in 2023 season.</p>
+                        <div class="squad-stats">
+                            <span><strong>Matches:</strong> 35</span>
+                            <span><strong>Wickets:</strong> 42</span>
+                            <span><strong>SR:</strong> 17.50</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Greatest Victories Section -->
+        <section id="victories" class="section-container bg-alt">
+            <div class="section-header">
+                <h2>Greatest Victories</h2>
+                <div class="header-line"></div>
+                <p>Relive the most memorable match results that CSK pulled out from difficult situations.</p>
+            </div>
+            
+            <div class="grid-layout grid-2">
+                <!-- Victory 1 -->
+                <div class="card victory-card">
+                    <div class="victory-header">
+                        <div>
+                            <span class="opponent-tag">vs Gujarat Titans</span>
+                            <span class="match-year">2023</span>
+                        </div>
+                        <h3 class="match-title">IPL 2023 Final Thriller</h3>
+                    </div>
+                    <div class="victory-body">
+                        <p class="match-summary">
+                            Rain delayed the final, forcing a reserve day and a revised DLS target of 171 in 15 overs. With 10 runs required off the final two deliveries, Ravindra Jadeja smashed a six and a four off Mohit Sharma to clinch CSK's 5th title.
+                        </p>
+                        <!-- Expandable Content -->
+                        <div class="victory-details collapsed">
+                            <div class="key-performers">
+                                <strong>Key Performers:</strong>
+                                <ul>
+                                    <li>Devon Conway: 47 (25 balls)</li>
+                                    <li>Shivam Dube: 32* (21 balls)</li>
+                                    <li>Ravindra Jadeja: 15* (6 balls) & 1/38</li>
+                                </ul>
+                            </div>
+                            <div class="match-statistics">
+                                <strong>Match Stats:</strong>
+                                <table class="victory-table">
+                                    <tr><td>GT Score</td><td>214/4 (20 overs)</td></tr>
+                                    <tr><td>CSK Score (DLS)</td><td>171/5 (15 overs)</td></tr>
+                                    <tr><td>Margin</td><td>CSK won by 5 wickets</td></tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="victory-actions">
+                            <button class="btn-text btn-expand-victory">Read More <i class="fas fa-chevron-down"></i></button>
+                            <a href="https://www.iplt20.com" target="_blank" class="btn btn-secondary btn-sm">Highlights <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Victory 2 -->
+                <div class="card victory-card">
+                    <div class="victory-header">
+                        <div>
+                            <span class="opponent-tag">vs Sunrisers Hyderabad</span>
+                            <span class="match-year">2018</span>
+                        </div>
+                        <h3 class="match-title">IPL 2018 Final Comeback</h3>
+                    </div>
+                    <div class="victory-body">
+                        <p class="match-summary">
+                            Returning to the tournament after a 2-year suspension, CSK made a sensational run. In the grand finale, Shane Watson overcame a slow start (0 off his first 10 balls) to blast an unbeaten 117 off 57 balls to comfortably chase 179.
+                        </p>
+                        <!-- Expandable Content -->
+                        <div class="victory-details collapsed">
+                            <div class="key-performers">
+                                <strong>Key Performers:</strong>
+                                <ul>
+                                    <li>Shane Watson: 117* (57 balls)</li>
+                                    <li>Lungi Ngidi: 1/26 (4 overs)</li>
+                                    <li>Suresh Raina: 32 (24 balls)</li>
+                                </ul>
+                            </div>
+                            <div class="match-statistics">
+                                <strong>Match Stats:</strong>
+                                <table class="victory-table">
+                                    <tr><td>SRH Score</td><td>178/6 (20 overs)</td></tr>
+                                    <tr><td>CSK Score</td><td>181/2 (18.3 overs)</td></tr>
+                                    <tr><td>Margin</td><td>CSK won by 8 wickets</td></tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="victory-actions">
+                            <button class="btn-text btn-expand-victory">Read More <i class="fas fa-chevron-down"></i></button>
+                            <a href="https://www.iplt20.com" target="_blank" class="btn btn-secondary btn-sm">Highlights <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Victory 3 -->
+                <div class="card victory-card">
+                    <div class="victory-header">
+                        <div>
+                            <span class="opponent-tag">vs Royal Challengers Bangalore</span>
+                            <span class="match-year">2011</span>
+                        </div>
+                        <h3 class="match-title">IPL 2011 Final Dominance</h3>
+                    </div>
+                    <div class="victory-body">
+                        <p class="match-summary">
+                            Playing in front of a passionate home crowd, CSK became the first team to defend an IPL title. Murali Vijay played a stellar knock of 95 and put on a 159-run opening partnership with Mike Hussey to crush RCB.
+                        </p>
+                        <!-- Expandable Content -->
+                        <div class="victory-details collapsed">
+                            <div class="key-performers">
+                                <strong>Key Performers:</strong>
+                                <ul>
+                                    <li>Murali Vijay: 95 (52 balls)</li>
+                                    <li>Michael Hussey: 63 (45 balls)</li>
+                                    <li>Ravichandran Ashwin: 3/16 (4 overs)</li>
+                                </ul>
+                            </div>
+                            <div class="match-statistics">
+                                <strong>Match Stats:</strong>
+                                <table class="victory-table">
+                                    <tr><td>CSK Score</td><td>205/5 (20 overs)</td></tr>
+                                    <tr><td>RCB Score</td><td>147/8 (20 overs)</td></tr>
+                                    <tr><td>Margin</td><td>CSK won by 58 runs</td></tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="victory-actions">
+                            <button class="btn-text btn-expand-victory">Read More <i class="fas fa-chevron-down"></i></button>
+                            <a href="https://www.iplt20.com" target="_blank" class="btn btn-secondary btn-sm">Highlights <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Victory 4 -->
+                <div class="card victory-card">
+                    <div class="victory-header">
+                        <div>
+                            <span class="opponent-tag">vs Mumbai Indians</span>
+                            <span class="match-year">2010</span>
+                        </div>
+                        <h3 class="match-title">IPL 2010 Final - First Title</h3>
+                    </div>
+                    <div class="victory-body">
+                        <p class="match-summary">
+                            After finishing as runners-up in 2008, CSK won their first title at Navi Mumbai. MS Dhoni's smart tactical field placements (placing a straight mid-off for Pollard) choked MI's run chase of 169.
+                        </p>
+                        <!-- Expandable Content -->
+                        <div class="victory-details collapsed">
+                            <div class="key-performers">
+                                <strong>Key Performers:</strong>
+                                <ul>
+                                    <li>Suresh Raina: 57* (35 balls) & 1/21</li>
+                                    <li>Albie Morkel: 15 (6 balls) & 1/20</li>
+                                    <li>Shadab Jakati: 2/44 (3 overs)</li>
+                                </ul>
+                            </div>
+                            <div class="match-statistics">
+                                <strong>Match Stats:</strong>
+                                <table class="victory-table">
+                                    <tr><td>CSK Score</td><td>168/5 (20 overs)</td></tr>
+                                    <tr><td>MI Score</td><td>146/9 (20 overs)</td></tr>
+                                    <tr><td>Margin</td><td>CSK won by 22 runs</td></tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="victory-actions">
+                            <button class="btn-text btn-expand-victory">Read More <i class="fas fa-chevron-down"></i></button>
+                            <a href="https://www.iplt20.com" target="_blank" class="btn btn-secondary btn-sm">Highlights <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Team Records Section -->
+        <section id="records" class="section-container">
+            <div class="section-header">
+                <h2>Team Records</h2>
+                <div class="header-line"></div>
+                <p>Individual milestones and team records set by the Super Kings over the seasons.</p>
+            </div>
+            <div class="grid-layout grid-4">
+                <!-- Record 1 -->
+                <div class="card record-card">
+                    <div class="record-icon"><i class="fas fa-users"></i></div>
+                    <h3>Highest Partnership</h3>
+                    <p class="record-value">159 Runs</p>
+                    <p class="record-meta">M. Vijay & M. Hussey</p>
+                    <span class="record-detail">vs RCB, 2011 Final</span>
+                </div>
+
+                <!-- Record 2 -->
+                <div class="card record-card">
+                    <div class="record-icon"><i class="fas fa-bolt"></i></div>
+                    <h3>Fastest Fifty</h3>
+                    <p class="record-value">16 Balls</p>
+                    <p class="record-meta">Suresh Raina</p>
+                    <span class="record-detail">vs PBKS, 2014</span>
+                </div>
+
+                <!-- Record 3 -->
+                <div class="card record-card">
+                    <div class="record-icon"><i class="fas fa-fire"></i></div>
+                    <h3>Fastest Hundred</h3>
+                    <p class="record-value">46 Balls</p>
+                    <p class="record-meta">Murali Vijay</p>
+                    <span class="record-detail">vs RR, 2010</span>
+                </div>
+
+                <!-- Record 4 -->
+                <div class="card record-card">
+                    <div class="record-icon"><i class="fas fa-baseball-ball"></i></div>
+                    <h3>Best Bowling Figures</h3>
+                    <p class="record-value">5/16</p>
+                    <p class="record-meta">Ravindra Jadeja</p>
+                    <span class="record-detail">vs Deccan Chargers, 2012</span>
+                </div>
+
+                <!-- Record 5 -->
+                <div class="card record-card">
+                    <div class="record-icon"><i class="fas fa-trophy"></i></div>
+                    <h3>Most POTM Awards</h3>
+                    <p class="record-value">15 Awards</p>
+                    <p class="record-meta">MS Dhoni</p>
+                    <span class="record-detail">For CSK matches</span>
+                </div>
+
+                <!-- Record 6 -->
+                <div class="card record-card">
+                    <div class="record-icon"><i class="fas fa-cloud-upload-alt"></i></div>
+                    <h3>Most Sixes (Season)</h3>
+                    <p class="record-value">37 Sixes</p>
+                    <p class="record-meta">Dwayne Smith</p>
+                    <span class="record-detail">In the 2014 Season</span>
+                </div>
+
+                <!-- Record 7 -->
+                <div class="card record-card">
+                    <div class="record-icon"><i class="fas fa-star"></i></div>
+                    <h3>Most Runs (Season)</h3>
+                    <p class="record-value">733 Runs</p>
+                    <p class="record-meta">Michael Hussey</p>
+                    <span class="record-detail">Orange Cap (2013)</span>
+                </div>
+
+                <!-- Record 8 -->
+                <div class="card record-card">
+                    <div class="record-icon"><i class="fas fa-award"></i></div>
+                    <h3>Most Wickets (Season)</h3>
+                    <p class="record-value">32 Wickets</p>
+                    <p class="record-meta">Dwayne Bravo</p>
+                    <span class="record-detail">Purple Cap (2013)</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Home Stadium Section -->
+        <section id="stadium" class="section-container bg-alt">
+            <div class="section-header">
+                <h2>Home Stadium</h2>
+                <div class="header-line"></div>
+                <p>The fortress of the Chennai Super Kings: Chepauk Stadium.</p>
+            </div>
+            <div class="stadium-layout card">
+                <div class="stadium-img-wrapper">
+                    <img src="assets/chepauk_stadium.png" alt="M. A. Chidambaram Stadium" class="stadium-img">
+                </div>
+                <div class="stadium-info">
+                    <h3>M. A. Chidambaram Stadium (Chepauk)</h3>
+                    <ul class="stadium-details-list">
+                        <li><strong><i class="fas fa-map-marker-alt"></i> Location:</strong> Chepauk, Chennai, Tamil Nadu, India</li>
+                        <li><strong><i class="fas fa-users"></i> Capacity:</strong> 50,000 Spectators</li>
+                        <li><strong><i class="fas fa-calendar-alt"></i> Established:</strong> 1916 (One of the oldest in India)</li>
+                        <li><strong><i class="fas fa-wind"></i> Pitch Type:</strong> Traditionally slow, dry, and spin-friendly</li>
+                    </ul>
+                    <p class="stadium-desc">
+                        Affectionately called "Chepauk" or "The Lion's Den," this stadium is famous for its sea breeze and the sea of yellow fans that fills every corner during home games. The Chennai crowd is also renowned across the cricket world for being incredibly knowledgeable and appreciative of good cricket, even when played by opposition teams.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. Trophy Cabinet Section -->
+        <section id="cabinet" class="section-container">
+            <div class="section-header">
+                <h2>Trophy Cabinet</h2>
+                <div class="header-line"></div>
+                <p>A proud history of silverware and accomplishments over the years.</p>
+            </div>
+            <div class="grid-layout grid-3">
+                <!-- Cabinet Item 1 -->
+                <div class="card trophy-card gold-border">
+                    <div class="trophy-icon"><i class="fas fa-trophy text-gold"></i></div>
+                    <h3>IPL Titles</h3>
+                    <p class="trophy-count">5 Times</p>
+                    <p class="trophy-years">2010, 2011, 2018, 2021, 2023</p>
+                    <span class="trophy-label">Joint most titles in IPL history</span>
+                </div>
+
+                <!-- Cabinet Item 2 -->
+                <div class="card trophy-card blue-border">
+                    <div class="trophy-icon"><i class="fas fa-medal text-silver"></i></div>
+                    <h3>Runner-Up Finishes</h3>
+                    <p class="trophy-count">5 Times</p>
+                    <p class="trophy-years">2008, 2012, 2013, 2015, 2019</p>
+                    <span class="trophy-label">Most final appearances by any team</span>
+                </div>
+
+                <!-- Cabinet Item 3 -->
+                <div class="card trophy-card yellow-border">
+                    <div class="trophy-icon"><i class="fas fa-globe text-bronze"></i></div>
+                    <h3>Champions League T20</h3>
+                    <p class="trophy-count">2 Titles</p>
+                    <p class="trophy-years">2010, 2014</p>
+                    <span class="trophy-label">Aromatic global tournaments won</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 11. IPL Quiz Section -->
+        <section id="quiz" class="section-container bg-alt">
+            <div class="section-header">
+                <h2>IPL Trivia Quiz</h2>
+                <div class="header-line"></div>
+                <p>Test your knowledge about Chennai Super Kings and see if you are a true Super Fan!</p>
+            </div>
+            
+            <div class="quiz-container card" id="quiz-box">
+                <!-- Screen 1: Start Quiz -->
+                <div id="quiz-start" class="quiz-screen active">
+                    <div class="quiz-intro-icon"><i class="fas fa-question-circle"></i></div>
+                    <h3>CSK Fan Trivia Challenge</h3>
+                    <p>You will be asked 5 multiple-choice questions. Answer correctly to prove your loyalty!</p>
+                    <button class="btn btn-primary" id="start-quiz-btn">Start Quiz</button>
+                </div>
+
+                <!-- Screen 2: Question Display -->
+                <div id="quiz-question" class="quiz-screen">
+                    <div class="quiz-progress-header">
+                        <span id="quiz-question-number">Question 1 of 5</span>
+                        <span id="quiz-score-indicator">Score: 0</span>
+                    </div>
+                    <div class="quiz-progress-bar-bg">
+                        <div id="quiz-bar-fill" class="quiz-bar-fill" style="width: 20%;"></div>
+                    </div>
+                    <h3 id="question-text" class="question-title">What is the tagline of Chennai Super Kings?</h3>
+                    <div id="quiz-options" class="quiz-options-list">
+                        <!-- Options generated by JS -->
+                    </div>
+                    <div class="quiz-explanation-box hidden" id="explanation-box">
+                        <p id="explanation-text"></p>
+                    </div>
+                    <div class="quiz-footer">
+                        <button class="btn btn-secondary hidden" id="next-question-btn">Next Question <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- Screen 3: Results Display -->
+                <div id="quiz-results" class="quiz-screen">
+                    <div class="quiz-result-icon" id="result-icon"><i class="fas fa-trophy"></i></div>
+                    <h3 id="result-heading">Quiz Completed!</h3>
+                    <p id="result-summary">You scored 4 out of 5</p>
+                    <div class="quiz-feedback" id="result-feedback">Excellent job! You are a certified CSK Super Fan! Whistle Podu!</div>
+                    <button class="btn btn-primary" id="restart-quiz-btn">Play Again</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-about">
+                <h3>Chennai Super Kings Fan Club</h3>
+                <p>This is a student fan club project built for demonstrating web development fundamentals. All media and team details are used for educational purposes.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Sections</h4>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#hall-of-fame">Hall of Fame</a></li>
+                    <li><a href="#squad">Current Squad</a></li>
+                    <li><a href="#quiz">Trivia Quiz</a></li>
+                </ul>
+            </div>
+            <div class="footer-socials">
+                <h4>Follow the Yellow Army</h4>
+                <div class="social-icons">
+                    <a href="https://twitter.com/chennaipl" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com/chennaiipl" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://facebook.com/TheChennaiSuperKings" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="https://youtube.com" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Chennai Super Kings Fan Club. All rights reserved.</p>
+            <p class="credit-tag">Made by Club Member (College Assignment Project)</p>
+        </div>
+    </footer>
+
+    <!-- Link to external JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

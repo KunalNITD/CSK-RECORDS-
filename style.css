@@ -1,0 +1,1447 @@
+/* 
+========================================================================
+   CSK FAN CLUB SITE STYLESHEET
+   Description: Simple, clean styles for a college project.
+   Features: Light/Dark Theme variables, Sticky Navbar, Responsive Grids.
+========================================================================
+*/
+
+/* ---------------------------------------------------------------------
+   1. Theme Variables & Base Resets
+--------------------------------------------------------------------- */
+:root {
+    /* CSK Brand Colors */
+    --primary-yellow: #F9CD05;
+    --primary-blue: #0F4C81;
+    --primary-blue-dark: #072a4b;
+    --primary-yellow-light: #fff5cc;
+
+    /* Theme Colors (Light Default) */
+    --bg-primary: #F5F7FA;
+    --bg-secondary: #FFFFFF;
+    --text-primary: #2D3748;
+    --text-secondary: #718096;
+    
+    /* UI Element Colors */
+    --card-bg: #FFFFFF;
+    --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
+    --card-shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.12), 0 4px 6px -2px rgba(0, 0, 0, 0.08);
+    --border-color: #E2E8F0;
+    
+    /* Quiz & Status Colors */
+    --success-color: #48BB78;
+    --error-color: #F56565;
+    --success-bg: #C6F6D5;
+    --error-bg: #FED7D7;
+    
+    /* Trophy Medals */
+    --gold: #D4AF37;
+    --silver: #A0AEC0;
+    --bronze: #CD7F32;
+    
+    /* Font and transitions */
+    --font-main: 'Poppins', sans-serif;
+    --transition-speed: 0.3s;
+}
+
+/* Dark Theme Variables */
+body.dark-theme {
+    --bg-primary: #121212;
+    --bg-secondary: #1E1E1E;
+    --text-primary: #F7FAFC;
+    --text-secondary: #A0AEC0;
+    
+    --card-bg: #1E1E1E;
+    --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    --card-shadow-hover: 0 10px 20px rgba(0, 0, 0, 0.6);
+    --border-color: #2D3748;
+    --primary-yellow-light: #423602;
+    
+    --success-bg: #22543D;
+    --error-bg: #742A2A;
+}
+
+/* Base resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+    transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ---------------------------------------------------------------------
+   2. Reusable Utility Classes & Buttons
+--------------------------------------------------------------------- */
+.section-container {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.bg-alt {
+    background-color: var(--bg-secondary);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-header h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+body.dark-theme .section-header h2 {
+    color: var(--primary-yellow);
+}
+
+.header-line {
+    width: 60px;
+    height: 4px;
+    background-color: var(--primary-yellow);
+    margin: 12px auto;
+    border-radius: 2px;
+}
+
+body.dark-theme .header-line {
+    background-color: var(--primary-blue);
+}
+
+.section-header p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Grids */
+.grid-layout {
+    display: grid;
+    gap: 30px;
+    width: 100%;
+}
+
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-4 { grid-template-columns: repeat(4, 1fr); }
+
+/* Basic Cards */
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease, border-color var(--transition-speed) ease;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--card-shadow-hover);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    font-family: var(--font-main);
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color var(--transition-speed) ease, transform 0.2s ease, color var(--transition-speed) ease;
+    text-align: center;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.btn-primary {
+    background-color: var(--primary-yellow);
+    color: #1A202C; /* Dark text for readability */
+}
+
+.btn-primary:hover {
+    background-color: #e2ba04;
+}
+
+.btn-secondary {
+    background-color: var(--primary-blue);
+    color: #FFFFFF;
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-blue-dark);
+}
+
+.btn-sm {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+}
+
+.btn-text {
+    background: none;
+    border: none;
+    color: var(--primary-blue);
+    font-weight: 600;
+    cursor: pointer;
+    font-family: var(--font-main);
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.2s ease;
+}
+
+body.dark-theme .btn-text {
+    color: var(--primary-yellow);
+}
+
+.btn-text:hover {
+    text-decoration: underline;
+}
+
+/* ---------------------------------------------------------------------
+   3. Header & Navigation Menu
+--------------------------------------------------------------------- */
+.navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: var(--bg-secondary);
+    border-bottom: 2px solid var(--primary-yellow);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    z-index: 1000;
+    transition: background-color var(--transition-speed) ease, border-color var(--transition-speed) ease;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-logo {
+    height: 45px;
+    width: auto;
+}
+
+.nav-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+    letter-spacing: 0.5px;
+}
+
+body.dark-theme .nav-title {
+    color: var(--primary-yellow);
+}
+
+.nav-menu {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--primary-blue);
+    background-color: var(--primary-yellow-light);
+}
+
+body.dark-theme .nav-link:hover, body.dark-theme .nav-link.active {
+    color: var(--primary-yellow);
+    background-color: var(--primary-yellow-light);
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Theme Toggle Button */
+.theme-btn {
+    background: none;
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    transition: border-color 0.2s, background-color 0.2s;
+}
+
+.theme-btn:hover {
+    background-color: var(--border-color);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+    color: var(--text-primary);
+}
+
+/* ---------------------------------------------------------------------
+   4. Hero Section
+--------------------------------------------------------------------- */
+.hero-section {
+    position: relative;
+    padding: 100px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    min-height: 550px;
+}
+
+.hero-banner-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-banner {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(15, 76, 129, 0.92) 0%, rgba(249, 205, 5, 0.75) 100%);
+    z-index: 2;
+}
+
+body.dark-theme .hero-overlay {
+    background: linear-gradient(135deg, rgba(10, 10, 10, 0.95) 0%, rgba(20, 20, 20, 0.85) 100%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    max-width: 800px;
+    color: #FFFFFF;
+}
+
+body.dark-theme .hero-content {
+    color: #F7FAFC;
+}
+
+.hero-logo {
+    height: 120px;
+    margin: 0 auto 20px auto;
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.3));
+    animation: bounce 3s infinite alternate;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: 800;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    margin-bottom: 5px;
+    color: #FFFFFF;
+}
+
+.hero-tagline {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-yellow);
+    margin-bottom: 25px;
+    letter-spacing: 1.5px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.hero-intro {
+    font-size: 1.1rem;
+    margin-bottom: 35px;
+    opacity: 0.95;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.btn-explore {
+    padding: 15px 35px;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-8px); }
+}
+
+/* ---------------------------------------------------------------------
+   5. Hall of Fame
+--------------------------------------------------------------------- */
+.hall-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.player-img-container {
+    height: 240px;
+    background-color: var(--primary-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.player-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-speed) ease;
+}
+
+.hall-card:hover .player-img {
+    transform: scale(1.05);
+}
+
+.card-content {
+    padding: 24px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.player-name {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.player-role {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--primary-blue);
+    margin-bottom: 12px;
+    display: inline-block;
+}
+
+body.dark-theme .player-role {
+    color: var(--primary-yellow);
+}
+
+.player-desc {
+    font-size: 0.92rem;
+    color: var(--text-secondary);
+    margin-bottom: 15px;
+}
+
+.player-achievements {
+    font-size: 0.88rem;
+    margin-bottom: 20px;
+    border-top: 1px dashed var(--border-color);
+    padding-top: 12px;
+}
+
+.player-achievements strong {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--text-primary);
+}
+
+.player-achievements ul {
+    padding-left: 15px;
+    list-style: disc;
+}
+
+.player-achievements li {
+    margin-bottom: 4px;
+    color: var(--text-secondary);
+}
+
+.player-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: auto;
+    background-color: var(--bg-primary);
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+}
+
+.stat-box {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-box strong {
+    font-size: 0.95rem;
+    color: var(--text-primary);
+}
+
+/* ---------------------------------------------------------------------
+   6. Team Statistics Dashboard
+--------------------------------------------------------------------- */
+.stats-dashboard {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.dashboard-card {
+    padding: 25px;
+}
+
+.dashboard-card h3 {
+    font-size: 1.25rem;
+    color: var(--primary-blue);
+    margin-bottom: 5px;
+}
+
+body.dark-theme .dashboard-card h3 {
+    color: var(--primary-yellow);
+}
+
+.dash-subtitle {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+}
+
+.progress-container {
+    margin-bottom: 18px;
+}
+
+.progress-container:last-child {
+    margin-bottom: 0;
+}
+
+.progress-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: var(--text-primary);
+}
+
+.progress-bar-bg {
+    height: 12px;
+    background-color: var(--border-color);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background-color: var(--primary-yellow);
+    border-radius: 6px;
+    transition: width 1s ease-in-out;
+}
+
+.dashboard-card:nth-child(even) .progress-bar-fill {
+    background-color: var(--primary-blue);
+}
+
+body.dark-theme .dashboard-card:nth-child(even) .progress-bar-fill {
+    background-color: var(--primary-yellow);
+}
+
+/* ---------------------------------------------------------------------
+   7. Current Squad (IPL 2026)
+--------------------------------------------------------------------- */
+.squad-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    margin-bottom: 40px;
+    background-color: var(--bg-secondary);
+}
+
+.search-box-container {
+    position: relative;
+    width: 100%;
+}
+
+.search-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+}
+
+#player-search {
+    width: 100%;
+    padding: 12px 15px 12px 45px;
+    font-family: var(--font-main);
+    font-size: 0.95rem;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    outline: none;
+    transition: border-color var(--transition-speed);
+}
+
+#player-search:focus {
+    border-color: var(--primary-blue);
+}
+
+body.dark-theme #player-search:focus {
+    border-color: var(--primary-yellow);
+}
+
+.filter-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tab-btn {
+    padding: 8px 16px;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: var(--font-main);
+    font-weight: 600;
+    font-size: 0.85rem;
+    transition: all 0.2s ease;
+}
+
+.tab-btn:hover, .tab-btn.active {
+    background-color: var(--primary-blue);
+    color: #FFFFFF;
+    border-color: var(--primary-blue);
+}
+
+body.dark-theme .tab-btn:hover, body.dark-theme .tab-btn.active {
+    background-color: var(--primary-yellow);
+    color: #121212;
+    border-color: var(--primary-yellow);
+}
+
+.btn-export {
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.squad-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: var(--card-bg);
+}
+
+/* Hidden squad card when filtered out */
+.squad-card.hidden {
+    display: none !important;
+}
+
+.squad-img-container {
+    height: 200px;
+    background-color: #E2E8F0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+body.dark-theme .squad-img-container {
+    background-color: #2D3748;
+}
+
+.squad-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.squad-details {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.squad-name {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.squad-role {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--primary-blue);
+    margin-bottom: 8px;
+    display: block;
+}
+
+body.dark-theme .squad-role {
+    color: var(--primary-yellow);
+}
+
+.squad-meta {
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    margin-bottom: 12px;
+    display: flex;
+    gap: 12px;
+}
+
+.squad-bio {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.squad-stats {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid var(--border-color);
+    padding-top: 10px;
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+}
+
+.squad-stats strong {
+    color: var(--text-primary);
+}
+
+/* ---------------------------------------------------------------------
+   8. Greatest Victories
+--------------------------------------------------------------------- */
+.victory-card {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.victory-header {
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 15px;
+}
+
+.opponent-tag {
+    background-color: var(--primary-yellow-light);
+    color: var(--primary-blue-dark);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 12px;
+    text-transform: uppercase;
+}
+
+body.dark-theme .opponent-tag {
+    background-color: #423602;
+    color: var(--primary-yellow);
+}
+
+.match-year {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-left: 10px;
+}
+
+.match-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-top: 8px;
+    color: var(--text-primary);
+}
+
+.match-summary {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
+/* Expandable logic */
+.victory-details {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, opacity 0.4s ease-out;
+}
+
+.victory-details.collapsed {
+    max-height: 0;
+    opacity: 0;
+    margin-top: 0;
+}
+
+.victory-details.expanded {
+    max-height: 500px;
+    opacity: 1;
+    margin-top: 10px;
+}
+
+.key-performers {
+    background-color: var(--bg-primary);
+    padding: 12px;
+    border-radius: 6px;
+    border-left: 4px solid var(--primary-blue);
+    font-size: 0.88rem;
+}
+
+body.dark-theme .key-performers {
+    border-left-color: var(--primary-yellow);
+}
+
+.key-performers strong {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--text-primary);
+}
+
+.key-performers ul {
+    list-style: disc;
+    padding-left: 15px;
+}
+
+.key-performers li {
+    color: var(--text-secondary);
+    margin-bottom: 2px;
+}
+
+.victory-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+    margin-top: 8px;
+}
+
+.victory-table td {
+    padding: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.victory-table tr td:first-child {
+    font-weight: 600;
+    color: var(--text-primary);
+    width: 40%;
+}
+
+.victory-table tr td:last-child {
+    color: var(--text-secondary);
+}
+
+.victory-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--border-color);
+    padding-top: 15px;
+    margin-top: auto;
+}
+
+/* ---------------------------------------------------------------------
+   9. Team Records (Grid of 8)
+--------------------------------------------------------------------- */
+.record-card {
+    padding: 25px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.record-icon {
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-yellow-light);
+    color: var(--primary-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 1.3rem;
+}
+
+body.dark-theme .record-icon {
+    background-color: #423602;
+    color: var(--primary-yellow);
+}
+
+.record-card h3 {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.record-value {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--primary-blue);
+    line-height: 1;
+}
+
+body.dark-theme .record-value {
+    color: var(--primary-yellow);
+}
+
+.record-meta {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.record-detail {
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+}
+
+/* ---------------------------------------------------------------------
+   10. Home Stadium Section
+--------------------------------------------------------------------- */
+.stadium-layout {
+    display: flex;
+    flex-direction: row;
+}
+
+.stadium-img-wrapper {
+    width: 50%;
+    overflow: hidden;
+}
+
+.stadium-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.stadium-info {
+    width: 50%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.stadium-info h3 {
+    font-size: 1.6rem;
+    color: var(--primary-blue);
+    font-weight: 700;
+}
+
+body.dark-theme .stadium-info h3 {
+    color: var(--primary-yellow);
+}
+
+.stadium-details-list li {
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+    color: var(--text-secondary);
+}
+
+.stadium-details-list li strong {
+    color: var(--text-primary);
+}
+
+.stadium-details-list i {
+    color: var(--primary-blue);
+    margin-right: 8px;
+    width: 20px;
+    text-align: center;
+}
+
+body.dark-theme .stadium-details-list i {
+    color: var(--primary-yellow);
+}
+
+.stadium-desc {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
+/* ---------------------------------------------------------------------
+   11. Trophy Cabinet
+--------------------------------------------------------------------- */
+.trophy-card {
+    padding: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 5px solid var(--border-color);
+}
+
+.trophy-card.gold-border { border-top-color: var(--gold); }
+.trophy-card.blue-border { border-top-color: var(--primary-blue); }
+.trophy-card.yellow-border { border-top-color: var(--primary-yellow); }
+
+.trophy-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.text-gold { color: var(--gold); }
+.text-silver { color: var(--silver); }
+.text-bronze { color: var(--bronze); }
+
+.trophy-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+    color: var(--text-primary);
+}
+
+.trophy-count {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--primary-blue);
+    margin-bottom: 5px;
+}
+
+body.dark-theme .trophy-count {
+    color: var(--primary-yellow);
+}
+
+.trophy-years {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: 10px;
+}
+
+.trophy-label {
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+}
+
+/* ---------------------------------------------------------------------
+   12. IPL Quiz Section
+--------------------------------------------------------------------- */
+.quiz-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px;
+    text-align: center;
+}
+
+.quiz-screen {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.quiz-screen.active {
+    display: flex;
+}
+
+.quiz-intro-icon {
+    font-size: 4rem;
+    color: var(--primary-blue);
+}
+
+body.dark-theme .quiz-intro-icon {
+    color: var(--primary-yellow);
+}
+
+.quiz-progress-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.quiz-progress-bar-bg {
+    width: 100%;
+    height: 8px;
+    background-color: var(--border-color);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.quiz-bar-fill {
+    height: 100%;
+    background-color: var(--primary-yellow);
+    transition: width 0.3s ease;
+}
+
+.question-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 10px 0;
+}
+
+.quiz-options-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.option-btn {
+    width: 100%;
+    padding: 12px 20px;
+    font-family: var(--font-main);
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-align: left;
+    background-color: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    cursor: pointer;
+    color: var(--text-primary);
+    transition: all 0.2s ease;
+}
+
+.option-btn:hover {
+    background-color: var(--border-color);
+}
+
+.option-btn.correct {
+    background-color: var(--success-bg) !important;
+    border-color: var(--success-color) !important;
+    color: var(--success-color) !important;
+    font-weight: 600;
+}
+
+.option-btn.wrong {
+    background-color: var(--error-bg) !important;
+    border-color: var(--error-color) !important;
+    color: var(--error-color) !important;
+}
+
+/* Disable hover and click after selection */
+.option-btn.disabled {
+    pointer-events: none;
+    opacity: 0.7;
+}
+.option-btn.correct.disabled, .option-btn.wrong.disabled {
+    opacity: 1;
+}
+
+.quiz-explanation-box {
+    width: 100%;
+    background-color: var(--primary-yellow-light);
+    border-left: 4px solid var(--primary-yellow);
+    padding: 15px;
+    border-radius: 4px;
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+.quiz-explanation-box p {
+    color: var(--text-primary);
+}
+
+.quiz-footer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.quiz-result-icon {
+    font-size: 4rem;
+    color: var(--primary-yellow);
+}
+
+.quiz-feedback {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 10px 0;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* ---------------------------------------------------------------------
+   13. Footer
+--------------------------------------------------------------------- */
+.footer {
+    background-color: var(--primary-blue-dark);
+    color: #FFFFFF;
+    padding: 60px 20px 20px 20px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.footer-about {
+    flex: 2;
+    min-width: 250px;
+}
+
+.footer-about h3 {
+    font-size: 1.4rem;
+    color: var(--primary-yellow);
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.footer-about p {
+    color: #CBD5E0;
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+.footer-links {
+    flex: 1;
+    min-width: 150px;
+}
+
+.footer-links h4 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+    border-bottom: 2px solid var(--primary-yellow);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #CBD5E0;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: var(--primary-yellow);
+}
+
+.footer-socials {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-socials h4 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+    border-bottom: 2px solid var(--primary-yellow);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 1.1rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.social-icons a:hover {
+    background-color: var(--primary-yellow);
+    color: #1A202C;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 20px auto 0 auto;
+    text-align: center;
+    color: #CBD5E0;
+    font-size: 0.85rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.credit-tag {
+    font-weight: 600;
+    color: var(--primary-yellow);
+}
+
+/* ---------------------------------------------------------------------
+   14. Responsive Layout Media Queries
+--------------------------------------------------------------------- */
+
+@media (max-width: 1024px) {
+    .grid-4 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+    
+    .stats-dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    .stadium-layout {
+        flex-direction: column;
+    }
+    
+    .stadium-img-wrapper, .stadium-info {
+        width: 100%;
+    }
+    
+    .stadium-info {
+        padding: 25px;
+    }
+    
+    /* Sticky navbar responsive collapse */
+    .menu-toggle {
+        display: block;
+    }
+    
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: var(--bg-secondary);
+        border-bottom: 2px solid var(--primary-yellow);
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        gap: 10px;
+    }
+    
+    .nav-menu.open {
+        display: flex;
+    }
+    
+    .hero-title {
+        font-size: 2.2rem;
+    }
+    
+    .hero-tagline {
+        font-size: 1.2rem;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-3 {
+        grid-template-columns: 1fr;
+    }
+    
+    .grid-4 {
+        grid-template-columns: 1fr;
+    }
+    
+    .section-container {
+        padding: 50px 15px;
+    }
+    
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .hero-title {
+        font-size: 1.8rem;
+    }
+    
+    .quiz-container {
+        padding: 20px;
+    }
+}
